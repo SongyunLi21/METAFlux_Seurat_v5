@@ -1,4 +1,8 @@
 # METAFlux: Characterizing metabolism from bulk and single-cell RNA-seq data 
+# Key updates
+
+Updated the `Single_cell.R` file by adding a step in `get_ave_exp` to handle non-unique column names caused by bootstrapping (e.g., `Bcell, Bcell, Bcell` → `Bcell_1, Bcell_2, Bcell_3`). This is necessary because Seurat v5 does not tolerate non-unique column names, which previously caused errors.
+
 <p align="center">
   <img width="300"  src="https://github.com/KChen-lab/METAFlux/blob/main/METAFlux%20logo.jpeg">
 </p>
